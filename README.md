@@ -1,3 +1,3 @@
-# etsy-demo
+#etsy-api
 
-The little Etsy app we put together in class.
+Etsy Api homework.
