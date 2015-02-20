@@ -1,0 +1,250 @@
+@import "bourbon/_bourbon.scss";
+@import "neat/_neat.scss";
+@import "reset.scss";
+@import "fontello/css/fontello.css";
+
+/*------------------------------------*\
+#MIXINS
+\*------------------------------------*/
+
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+/*------------------------------------*\
+#COLORS
+\*------------------------------------*/
+$white: #ffffff;
+$black: #000000;
+$lightgray: #f2e6da;
+$neutral: #876359;
+$cherryred: #8f0e19;
+$burgundy: #4f1124;
+$lightblue: #dae7ed;
+$red-black: #33000f;
+$dark-gray: #333640;
+$gray: #9c9c9c;
+
+
+
+/*------------------------------------*\
+#TYPE
+\*------------------------------------*/
+
+$heading: 'Lora', serif;
+$body: 'Roboto', sans-serif;
+$bold: bolder;
+$light: lighter;
+$italic: italic;
+$track-in: -1px;
+$track-out: 1px;
+
+h1 {
+  font-family: $heading;
+  font-size: 30pt;
+  font-weight: $bold;
+  line-height: 1.5em;
+}
+
+
+
+/*------------------------------------*\
+#CONTAINER ELEMENTS
+\*------------------------------------*/
+
+body {
+  font-family: $body;
+  font-size: 12pt;
+  // @include outer-container;
+  background-color: $neutral;
+}
+
+
+
+.content {
+  @include span-columns(10);
+  @include shift(1);
+  @include pad();
+  background-color: $gray;
+  position: absolute;
+  top: 7.1em;
+  border-radius: 1em;
+  border-right: $burgundy groove 3px;
+  border-bottom: $red-black groove 3px;
+
+}
+
+li {
+  @include span-columns(11);
+  @include shift(.5);
+  text-align: justify;
+  @include pad(1.5em);
+  background-color: $white;
+  margin-bottom: 1.5em;
+  border-radius: .5em;
+  border: 2px groove $white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16pt;
+  font-family: $heading;
+  color: $red-black;
+  font-style: $italic;
+  line-height: 1.5em;
+}
+
+
+
+/*------------------------------------*\
+#HEADING
+\*------------------------------------*/
+.header {
+  @include span-columns(12);
+  padding: .5em .3em;
+  font-family: $heading;
+  font-weight: $bold;
+  font-size: 40pt;
+  position: fixed;
+  z-index: 10;
+  background-color: $burgundy;
+  color: $lightgray;
+  border-bottom: $lightgray double 5px;
+}
+
+/*------------------------------------*\
+#ELEMENTS
+\*------------------------------------*/
+
+img {
+  border:  $dark-gray inset 2px;
+  float: left;
+  margin-right : 15px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: .2em;
+}
+
+.about-user {
+  font-family: $body;
+  font-size: 12pt;
+
+}
+
+
+
+/*------------------------------------*\
+#NOT-FOUND
+\*------------------------------------*/
+
+/*------------------------------------*\
+#PROFILE-PAGE
+\*------------------------------------*/
+.description {
+  line-height: 1.5em;
+  @include pad();
+  text-align: justify;
+}
+
+.profile-holder {
+  top: 9em;
+  @include span-columns(9);
+  @include shift(1.5);
+  @include pad();
+  background-color: $lightgray;
+  position: absolute;
+  border-radius: 1em;
+  border: $lightgray groove 3px;
+
+  min-height: 5em;
+}
+
+.user-list-link {
+  background-color: $burgundy;
+  @include pad(.5em);
+  margin-top: 1em;
+  @include span-columns(4);
+  border-radius: 1em;
+  float: right;
+  margin-left: 1em;
+  font-size: 14pt;
+}
+
+.light {
+  opacity: .5;
+}
+.prof {
+  font-size: 50pt;
+}
+.user-head {
+  color: $red-black;
+  font-size: 24pt;
+  margin-bottom: .5em;
+  margin-top: .15em;
+ }
+
+ .user-location {
+   font-weight: $bold;
+   line-height: 1.5em;
+   margin-bottom: .5em;
+ }
+
+.all-listings {
+  background-color: $burgundy;
+  padding: .25em;
+  @include span-columns(4);
+  border-radius: .3em;
+  float: right;
+  margin-right: 1em;
+  text-align: center;
+  border: $burgundy inset 3px;
+}
+
+.list-link {
+  font-family: $body;
+  font-weight: $light;
+  font-size: 16pt;
+  float: right;
+  padding-top: 1.5em;
+  margin: 0 .2em .5em 0;
+  background-color: #4f1124;
+  color: #f2e6da;
+}
+
+
+/*------------------------------------*\
+#LISTINGS-PAGE
+\*------------------------------------*/
+
+
+.button-text {
+  color: $lightgray;
+  font-size: 14pt;
+
+}
+.user-profile-link {
+  background-color: $burgundy;
+  @include pad(.5em);
+  margin-top: 1em;
+  @include span-columns(3);
+  border-radius: 1em;
+  float: right;
+  margin-left: 1em;
+  text-align: center;
+  border: $burgundy inset 3px;
+}
+
+.item-title {
+  font-weight: $bold;
+  font-style: normal;
+}
+
+.item-price {
+  font-weight: $bold;
+  line-height: 2em;
+}
+
+.item-desc {
+  line-height: 1.5em;
+}

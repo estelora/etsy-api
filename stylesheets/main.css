@@ -1,0 +1,256 @@
+@import url(fontello/css/fontello.css);
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*------------------------------------*\
+#MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+#COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+#TYPE
+\*------------------------------------*/
+h1 {
+  font-family: "Lora", serif;
+  font-size: 30pt;
+  font-weight: bolder;
+  line-height: 1.5em; }
+
+/*------------------------------------*\
+#CONTAINER ELEMENTS
+\*------------------------------------*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12pt;
+  background-color: #876359; }
+
+.content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
+  padding: 2.35765%;
+  background-color: #9c9c9c;
+  position: absolute;
+  top: 7.1em;
+  border-radius: 1em;
+  border-right: #4f1124 groove 3px;
+  border-bottom: #33000f groove 3px; }
+  .content:last-child {
+    margin-right: 0; }
+
+li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 91.4702%;
+  margin-left: 4.2649%;
+  text-align: justify;
+  padding: 1.5em;
+  background-color: #ffffff;
+  margin-bottom: 1.5em;
+  border-radius: .5em;
+  border: 2px groove #ffffff; }
+  li:last-child {
+    margin-right: 0; }
+
+a {
+  text-decoration: none;
+  font-size: 16pt;
+  font-family: "Lora", serif;
+  color: #33000f;
+  font-style: italic;
+  line-height: 1.5em; }
+
+/*------------------------------------*\
+#HEADING
+\*------------------------------------*/
+.header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: .5em .3em;
+  font-family: "Lora", serif;
+  font-weight: bolder;
+  font-size: 40pt;
+  position: fixed;
+  z-index: 10;
+  background-color: #4f1124;
+  color: #f2e6da;
+  border-bottom: #f2e6da double 5px; }
+  .header:last-child {
+    margin-right: 0; }
+
+/*------------------------------------*\
+#ELEMENTS
+\*------------------------------------*/
+img {
+  border: #333640 inset 2px;
+  float: left;
+  margin-right: 15px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: .2em; }
+
+.about-user {
+  font-family: "Roboto", sans-serif;
+  font-size: 12pt; }
+
+/*------------------------------------*\
+#NOT-FOUND
+\*------------------------------------*/
+/*------------------------------------*\
+#PROFILE-PAGE
+\*------------------------------------*/
+.description {
+  line-height: 1.5em;
+  padding: 2.35765%;
+  text-align: justify; }
+
+.profile-holder {
+  top: 9em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-left: 12.79471%;
+  padding: 2.35765%;
+  background-color: #f2e6da;
+  position: absolute;
+  border-radius: 1em;
+  border: #f2e6da groove 3px;
+  min-height: 5em; }
+  .profile-holder:last-child {
+    margin-right: 0; }
+
+.user-list-link {
+  background-color: #4f1124;
+  padding: 0.5em;
+  margin-top: 1em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  border-radius: 1em;
+  float: right;
+  margin-left: 1em;
+  font-size: 14pt; }
+  .user-list-link:last-child {
+    margin-right: 0; }
+
+.light {
+  opacity: .5; }
+
+.prof {
+  font-size: 50pt; }
+
+.user-head {
+  color: #33000f;
+  font-size: 24pt;
+  margin-bottom: .5em;
+  margin-top: .15em; }
+
+.user-location {
+  font-weight: bolder;
+  line-height: 1.5em;
+  margin-bottom: .5em; }
+
+.all-listings {
+  background-color: #4f1124;
+  padding: .25em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  border-radius: .3em;
+  float: right;
+  margin-right: 1em;
+  text-align: center;
+  border: #4f1124 inset 3px; }
+  .all-listings:last-child {
+    margin-right: 0; }
+
+.list-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 16pt;
+  float: right;
+  padding-top: 1.5em;
+  margin: 0 .2em .5em 0;
+  background-color: #4f1124;
+  color: #f2e6da; }
+
+/*------------------------------------*\
+#LISTINGS-PAGE
+\*------------------------------------*/
+.button-text {
+  color: #f2e6da;
+  font-size: 14pt; }
+
+.user-profile-link {
+  background-color: #4f1124;
+  padding: 0.5em;
+  margin-top: 1em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  border-radius: 1em;
+  float: right;
+  margin-left: 1em;
+  text-align: center;
+  border: #4f1124 inset 3px; }
+  .user-profile-link:last-child {
+    margin-right: 0; }
+
+.item-title {
+  font-weight: bolder;
+  font-style: normal; }
+
+.item-price {
+  font-weight: bolder;
+  line-height: 2em; }
+
+.item-desc {
+  line-height: 1.5em; }
+
+/*# sourceMappingURL=main.css.map */

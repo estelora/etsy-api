@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Lora|Roboto:400,500,700,300italic,400italic' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width">
+  <title>Etsy</title>
+</head>
+<body>
+  <div class="main-content">
+
+  </div>
+
+  <script type="text/html" id="etsyProfile">
+    <div class = "header">
+      <span class="icon-user light prof"></span>
+      <span class="head-text">User Profile</span>
+      <span class="list-link">
+        <span class = "icon-list"></span>
+        All Listings</span>
+      </div>
+      <div class ="profile-holder">
+        <img src="<%- m.image_url_75x75 %>" alt="profile pic">
+        <h1 class="user-head">Profile: <%- m.first_name %> <%- m.last_name %></h1>
+
+        <p class="user-location">
+          <span class="icon-location"></span>
+          <%- m.city %>
+        </p>
+        <p class="description">
+          <%- m.bio %>
+        </p>
+        <a  href="#" class="all-listings">
+          <span class="icon-eye button-text"></span>
+          <span class="button-text">View Listings </span>
+        </a>
+      </div>
+
+    </script>
+
+    <script type="text/html" id="etsyList">
+      <div class = "header">
+        <span class="icon-feather"></span>
+        <span class="head-text">Etsy Listings</span>
+
+      </div>
+
+      <div class = "content">
+        <ul>
+          <% m.items.forEach(function (item) { %>
+            <li>
+              <a class="item-title" href="<%- item.url %>">
+                <img src="<%- item.MainImage.url_75x75 %>">
+                <%- item.title %>
+              </a>
+
+              <p class="item-price">$<%- item.price %></p>
+
+              <p class="item-desc"><%- item.description %></p>
+              <p class="user-profile-link">
+                <a  href="#profiles/<%- item.user_id %>" class="about-user">
+                  <spon class="icon-user button-text"></span>
+                    <spon class="button-text">View Profile<span></span></span>
+                    </a>
+
+                  </p>
+
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+
+          </script>
+
+          <script src="bower_components/jquery/dist/jquery.min.js"></script>
+          <script src="bower_components/lodash/lodash.min.js"></script>
+          <script src="bower_components/rlite/rlite.min.js"></script>
+
+          <script src="js/app.js"></script>
+          <script src="js/not-found.js"></script>
+          <script src="js/listings-page.js"></script>
+          <script src="js/profile-page.js"></script>
+          <script src="js/etsy-api.js"></script>
+          <script src="js/init.js"></script>
+
+        </body>
+        </html>
